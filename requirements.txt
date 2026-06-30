@@ -1,0 +1,27 @@
+# Core data handling
+pandas
+numpy
+
+# Sparse retrieval (BM25)
+rank-bm25
+
+# Dense retrieval (Sentence Transformers + backend)
+sentence-transformers
+torch
+
+# Similarity / metrics utilities
+scikit-learn
+
+# Text cleaning
+beautifulsoup4
+
+# Progress bars
+tqdm
+
+# Plotting
+matplotlib
+
+# Notebook + export
+jupyter
+notebook
+nbconvert

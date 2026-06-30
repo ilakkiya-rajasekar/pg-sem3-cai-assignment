@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+
+# Large data files
+medquad.csv
+data/
+*.zip
+*.pdf
+
+# Model cache
+embeddings.npy
+
+# Generated outputs and duplicate folders
+outputs/
+notebooks/
