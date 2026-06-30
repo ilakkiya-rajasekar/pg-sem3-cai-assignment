@@ -1,0 +1,78 @@
+﻿Problem Statement 1
+Hybrid Retrieval for Healthcare Conversational Question Answering 
+Problem Statement
+Develop a Healthcare Domain Hybrid Search Question Answering (QA) System that combines traditional keyword-based retrieval with semantic vector-based retrieval for answering healthcare-related user queries.
+The system should demonstrate how modern conversational AI systems retrieve accurate and contextually relevant healthcare information using both sparse retrieval techniques (BM25/TF-IDF) and dense retrieval techniques (embeddings/vector similarity).
+The system must focus on healthcare-specific information retrieval and should support domain terminology such as diseases, symptoms, medications, diagnostics, treatments, and preventive care.
+Students are expected to implement retrieval pipelines, compare retrieval strategies, analyze ranking effectiveness, and evaluate retrieval quality using standard information retrieval metrics.
+Module 1: Data Preparation & Sparse Retrieval
+Suggested Dataset:
+Datasets from these sources: Kaggle, MedQuAD, PubMed, NIH, WHO etc. healthcare articles
+Task 1: Healthcare Data Cleaning and Preparation (1.5 Marks)
+The preprocessing workflow may include removal of HTML tags and unwanted symbols, text normalization and lowercasing, sentence segmentation, filtering noisy records, and handling healthcare abbreviations (if applicable).
+The processed dataset should be saved in a structured format that can be used for indexing and retrieval.
+Analyze and report:
+* Why preprocessing is important for this problem
+* Difficulties associated with healthcare and clinical text
+* Challenges caused by specialized medical terminology
+Task 2: Sparse Search System Development (1.5 Marks)
+Build a sparse retrieval pipeline for healthcare information search using BM25, TF-IDF, or Elasticsearch/OpenSearch (optional). The system should retrieve Top-K relevant healthcare passages/documents for disease-, symptom-, and treatment-related queries and rank them based on relevance scores. Provide a brief analysis discussing the advantages and limitations of sparse retrieval methods, query-term mismatch challenges, and overall retrieval effectiveness. 
+Module 2: Embeddings & Hybrid Retrieval
+Task 3: Semantic Retrieval using Embeddings (2 Marks)
+Implement semantic retrieval using sentence embeddings using models such as Sentence Transformers, BioBERT, MiniLM, or ClinicalBERT. The system should convert healthcare documents into vector embeddings, store them in a vector index, and retrieve semantically relevant healthcare snippets using cosine similarity or ANN-based search techniques.
+Provide a brief explanation discussing the importance of embeddings in these types of systems, the difference between semantic retrieval and keyword-based retrieval, and the advantages of dense retrieval methods for handling complex medical terminology and context-aware search queries.
+Task 4: Hybrid Retrieval Pipeline (1.5 Marks)
+Develop a hybrid retrieval system by combining sparse retrieval and dense semantic retrieval approaches. Students may implement techniques such as weighted score fusion, Reciprocal Rank Fusion (RRF), or custom ranking logic.
+The hybrid system should improve retrieval effectiveness over individual retrieval methods and support natural language healthcare queries.
+Students must provide retrieval workflow explanation and justification for the chosen ranking/fusion strategy 
+Suggested Workflow:
+1. Execute sparse retrieval for a given query 
+2. Execute dense semantic retrieval for the same query 
+3. Combine retrieval outputs using a ranking/fusion strategy 
+4. Re-rank and return Top-K healthcare passages 
+5. Compare hybrid retrieval performance with standalone methods 
+Module 3: Conversational QA Pipeline & Evaluation
+Task 5: Healthcare Conversational QA Pipeline (2 Marks)
+Develop a healthcare conversational QA pipeline that accepts natural language healthcare queries and supports conversational healthcare queries using the hybrid retrieval pipeline.
+Students should:
+* Retrieve relevant healthcare snippets with Query preprocessing, retrieval and ranking pipeline, and basic handling of ambiguous or irrelevant queries.
+* Optionally generate concise responses using templates or lightweight models 
+Example Queries (your queries can vary):
+* "What are the symptoms of diabetes?" 
+* "How is hypertension treated?" 
+* "What causes vitamin D deficiency?" 
+Suggested Workflow:
+1. Accept healthcare-related user queries and preprocess input queries 
+2. Execute hybrid retrieval 
+3. Rank retrieved passages/snippets 
+4. Return Top-K results or concise responses 
+Students may experiment with different ranking or query reformulation strategies.
+Task 6: Retrieval Evaluation and Performance Analysis (1.5 Marks)
+Evaluate retrieval effectiveness using: Precision@K, Recall@K, MRR (Mean Reciprocal Rank)
+Students may additionally analyze: Hit Rate@K, NDCG, Retrieval latency 
+Students must:
+* Evaluate the system using at least 10 healthcare queries 
+* Compare sparse, dense, and hybrid retrieval methods 
+* Analyze retrieval quality and ranking effectiveness 
+Students should also discuss:
+* Limitations of retrieval methods 
+* Retrieval trade-offs in healthcare systems 
+* Scenarios where sparse or dense retrieval performs better
+
+Suggested Approach: Implement an end-to-end pipeline first, and then try to create experiments to compare different embedding models, retrieval metrics, similarity metrics, etc.
+Deliverables for the Assignment
+Students must submit:
+1. Complete and Executable Python notebook (Ipynb Notebook Only) 
+2. PDF export of the notebook with outputs/results consisting all Tasks mentioned in the assignment.
+* Sparse retrieval implementation 
+* Embedding generation and dense retrieval implementation 
+* Hybrid retrieval implementation 
+* Retrieval evaluation metrics and analysis 
+* Sample healthcare query outputs with explanations 
+3. Short technical report explaining (You can add this into Ipynb notebook or PDF): 
+* Design decisions 
+* Challenges faced 
+* Limitations 
+* Future improvements 
+All files must be zipped and uploaded as a single .zip file during submission.
+
